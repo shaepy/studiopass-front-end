@@ -1,6 +1,8 @@
 import { UserContext } from "../../contexts/UserContext";
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router";
+
+import balletClassImg from "../../assets/img/ballet-class.jpg";
+import { useNavigate } from "react-router";
 import styles from "./Landing.module.css";
 
 const Landing = () => {
@@ -25,7 +27,7 @@ const Landing = () => {
         width: "100vw",
         height: "100%",
         zIndex: -1,
-        backgroundImage: 'url("/src/assets/img/ballet-class.jpg")',
+        backgroundImage: `url(${balletClassImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}>
@@ -51,7 +53,9 @@ const Landing = () => {
           ) : (
             <main>
               {" "}
-              <section style={{ fontWeight: "600" }} className={styles.homeContent}>
+              <section
+                style={{ fontWeight: "600" }}
+                className={styles.homeContent}>
                 <p>
                   The heart of our academy is rooted in the disciplines of
                   traditional ballet.
