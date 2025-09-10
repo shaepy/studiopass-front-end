@@ -1,0 +1,53 @@
+.container article {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  align-items: center;
+}
+
+.container article header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.studentActions {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+h1 {
+  margin: 10px;
+}
+
+button.disabledButton {
+  background-color: #dadada;
+}
+
+article.scheduleArticle {
+  width: 75%;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
+  max-width: 550px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
