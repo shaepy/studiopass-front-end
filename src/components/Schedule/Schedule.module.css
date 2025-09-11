@@ -38,6 +38,10 @@ button.disabledButton:hover {
   background-color: #dadada;
 }
 
+td a:hover {
+  color: #000;
+}
+
 .card {
   background-color: white;
   border-radius: 14px;
@@ -72,11 +76,13 @@ table tr {
 
 button.studentBookButton {
   width: 100%;
+  min-width: 80px;
   font-size: 0.83rem;
 }
 
 button.viewButton {
   width: 100%;
+  min-width: 80px;
   background-color: #353535;
   color: #fff;
   font-size: 0.83rem;
@@ -85,4 +91,11 @@ button.viewButton {
 button.viewButton:hover {
   background-color: #89b8bd;
   transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+div.studentActions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

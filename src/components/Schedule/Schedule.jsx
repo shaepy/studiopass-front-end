@@ -1,6 +1,5 @@
 import { UserContext } from "../../contexts/UserContext";
 import { useState, useContext, useEffect } from "react";
-import { Link } from "react-router";
 import * as sessionApi from "../../services/sessionService";
 import styles from "./Schedule.module.css";
 
@@ -52,42 +51,44 @@ const Schedule = ({ handleAddBooking, linkToClassPage }) => {
                 <td>{session.endTime}</td>
                 <td>{session.instructorName}</td>
                 <td>
-                  <button
-                    className={styles.viewButton}
-                    onClick={() => linkToClassPage(session._id)}>
-                    View
-                  </button>
-                </td>
-                <td>
-                  {user &&
-                    user.role === "student" &&
-                    (session.reservedStatus ? (
-                      <button
-                        disabled
-                        className={`${styles.disabledButton} ${styles.studentBookButton}`}>
-                        Booked
-                      </button>
-                    ) : session.bookings.length >= session.capacity ? (
-                      <button
-                        disabled
-                        className={`${styles.disabledButton} ${styles.studentBookButton}`}>
-                        Full
-                      </button>
-                    ) : (
-                      <button
-                        className={styles.studentBookButton}
-                        onClick={() => handleAddBooking(session._id, user._id)}>
-                        Book
-                      </button>
-                    ))}
-                  {user &&
-                    (user.role === "instructor" || user.role === "owner") && (
-                      <>
-                        <p>
-                          {session.bookings.length}/{session.capacity} booked.
-                        </p>
-                      </>
-                    )}
+                  <div className={styles.studentActions}>
+                    <button
+                      className={styles.viewButton}
+                      onClick={() => linkToClassPage(session._id)}>
+                      View
+                    </button>
+                    {user &&
+                      user.role === "student" &&
+                      (session.reservedStatus ? (
+                        <button
+                          disabled
+                          className={`${styles.disabledButton} ${styles.studentBookButton}`}>
+                          Booked
+                        </button>
+                      ) : session.bookings.length >= session.capacity ? (
+                        <button
+                          disabled
+                          className={`${styles.disabledButton} ${styles.studentBookButton}`}>
+                          Full
+                        </button>
+                      ) : (
+                        <button
+                          className={styles.studentBookButton}
+                          onClick={() =>
+                            handleAddBooking(session._id, user._id)
+                          }>
+                          Book
+                        </button>
+                      ))}
+                    {user &&
+                      (user.role === "instructor" || user.role === "owner") && (
+                        <>
+                          <p>
+                            {session.bookings.length}/{session.capacity} booked.
+                          </p>
+                        </>
+                      )}
+                  </div>
                 </td>
               </tr>
             ))}
