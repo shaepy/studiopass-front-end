@@ -68,7 +68,7 @@ const ClassPage = ({ handleAddBooking, handleDeleteSession }) => {
             </div>
           )}
         </section>
-        <section>
+        <section className={`${adminStyles.reservedSection}`}>
           {session.bookings.length > 0 ? (
             <h3 style={{ fontWeight: "600" }}>
               Reserved {session.bookings.length}/{session.capacity}
@@ -80,11 +80,12 @@ const ClassPage = ({ handleAddBooking, handleDeleteSession }) => {
           )}
           {session.bookings.map((booking) => (
             <ul key={booking._id}>
-              <li className={adminStyles.reservedList}>
-                <Link to={`/users/${booking.userId._id}`}>
+              <Link to={`/users/${booking.userId._id}`}>
+                <li
+                  className={`${adminStyles.reservedList} ${adminStyles.reservedCard}`}>
                   {booking.userId.firstName} {booking.userId.lastName}
-                </Link>
-              </li>
+                </li>
+              </Link>
             </ul>
           ))}
         </section>

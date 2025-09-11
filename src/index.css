@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap");
 @import "tailwindcss";
 
 * {
@@ -25,7 +25,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #89b8bd;
+  color: #b0d0d3;
 }
 
 html,
@@ -53,7 +53,7 @@ main {
 
 h1 {
   font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 3.6rem;
+  font-size: 3rem;
 }
 
 h2 {
@@ -84,7 +84,7 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1em;
-  font-size: .95em;
+  font-size: 0.95em;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;

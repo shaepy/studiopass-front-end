@@ -40,9 +40,8 @@ section {
 }
 
 li.reservedList {
-  border: 1px solid #89B8BD;
   padding: 10px;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 li.reservedList a {
@@ -60,6 +59,8 @@ h1.nonCursive {
 }
 
 button.deleteButton {
+  width: 100%;
+  min-width: 72px;
   font-size: 0.9rem;
   background-color: #353535;
   color: #fff;
@@ -71,6 +72,8 @@ button.deleteButton:hover {
 }
 
 button.editButton {
+  width: 100%;
+  min-width: 72px;
   font-size: 0.9rem;
   background-color: #b0d0d3;
   color: #000;
@@ -94,5 +97,20 @@ button.editButton:hover {
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.reservedCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  min-width: 130px;
+}
+
+.reservedCard:hover {
+  transform: translateY(-4px);
+  color: #89b8bd;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

@@ -6,12 +6,8 @@ const About = () => {
     <main className={styles.container}>
       <section>
         <h1>About Us</h1>
-        <img
-          src={BalletPhoto}
-          style={{ maxWidth: "50%", alignSelf: "center" }}
-        />
-        <div className={styles.aboutUsParagraph}>
-          <p style={{ margin: "0 10px 10px 10px" }}>
+        <div className={`${styles.card}`}>
+          <p style={{ margin: "14px" }}>
             Founded over <strong>15 years ago</strong>, the{" "}
             <strong>Grand Academy of Ballet</strong> has become a cornerstone of
             classical dance training in our community. Established with the
@@ -20,7 +16,7 @@ const About = () => {
             <strong>discipline of traditional Russian technique</strong> with
             contemporary approaches to movement and artistry.
           </p>
-          <p style={{ margin: "0 10px 10px 10px" }}>
+          <p style={{ margin: "14px" }}>
             Over the years, we have been honored to host and collaborate with
             distinguished instructors and guest artists from around the globe.
             Among them are <strong>Sergei Antonov</strong>, former soloist of
@@ -31,7 +27,7 @@ const About = () => {
             shaped the academy’s curriculum, ensuring that each student receives
             training rooted in excellence and authenticity.
           </p>
-          <p style={{ margin: "0 10px 10px 10px" }}>
+          <p style={{ margin: "14px" }}>
             Our academy serves children, teens, and adults, offering programs
             that span from foundational ballet to pre-professional training. In
             addition to ballet, we provide contemporary dance, flexibility
@@ -41,10 +37,11 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section>
-        <h2>Why We Dance</h2>
-        <div className={styles.aboutUsParagraph}>
-          <p style={{ margin: "0 10px 10px 10px" }}>
+      <img src={BalletPhoto} style={{ maxWidth: "50%", alignSelf: "center" }} />
+      <section className={`${styles.aboutUsParagraph} ${styles.card}`}>
+        <div>
+          <h2>Why We Dance</h2>
+          <p style={{ margin: "14px" }}>
             At the <strong>Grand Academy of Ballet</strong>, we believe that
             dance is more than movement — it is expression, discipline, and
             connection. We dance to honor tradition, to tell stories without
@@ -53,7 +50,7 @@ const About = () => {
             personal growth. Whatever the path, we dance because it unites body,
             mind, and spirit in the pursuit of artistry.
           </p>
-          <p style={{ marginBottom: "40px" }}>
+          <p style={{ margin: "14px" }}>
             Today, the <strong>Grand Academy of Ballet</strong> continues to
             uphold its reputation as a premier institution, fostering both
             aspiring professionals and those who simply wish to experience the

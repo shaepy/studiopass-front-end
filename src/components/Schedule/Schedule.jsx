@@ -31,13 +31,13 @@ const Schedule = ({ handleAddBooking, linkToClassPage }) => {
     <main className={styles.container}>
       <h1>Class Schedule</h1>
       <section>
-        <table className="table-auto">
+        <table>
           <thead>
             <tr>
               <th>Class</th>
               <th>Date</th>
-              <th>Start Time</th>
-              <th>End Time</th>
+              <th>Start</th>
+              <th>End</th>
               <th>Instructor</th>
               <th></th>
               <th></th>
@@ -45,7 +45,7 @@ const Schedule = ({ handleAddBooking, linkToClassPage }) => {
           </thead>
           <tbody>
             {sessions.map((session) => (
-              <tr className={`${styles.card} p-9`}>
+              <tr className={`${styles.card}`}>
                 <td style={{ fontWeight: "600" }}>{session.title}</td>
                 <td>{session.startDate}</td>
                 <td>{session.startTime}</td>
