@@ -8,7 +8,7 @@ const About = () => {
         <h1>About Us</h1>
         <img
           src={BalletPhoto}
-          style={{ maxWidth: "98%", alignSelf: "center" }}
+          style={{ maxWidth: "50%", alignSelf: "center" }}
         />
         <div className={styles.aboutUsParagraph}>
           <p style={{ margin: "0 10px 10px 10px" }}>

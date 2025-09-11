@@ -31,7 +31,11 @@ const ClassPage = ({ handleAddBooking, handleDeleteSession }) => {
       <main className={adminStyles.container}>
         <header>
           <div>
-            <h1 className={adminStyles.nonCursive}>{session.title}</h1>
+            <h1
+              style={{ fontWeight: "600" }}
+              className={adminStyles.nonCursive}>
+              {session.title}
+            </h1>
             <h2>
               {session.month} {session.day}, {session.year} •{" "}
               {session.startTime} - {session.endTime}
@@ -43,9 +47,11 @@ const ClassPage = ({ handleAddBooking, handleDeleteSession }) => {
           <p className={adminStyles.description}>{session.description}</p>
           {user.role === "owner" && (
             <div className={adminStyles.manageClass}>
-              <h3>Manage Class</h3>
+              <h3 style={{ fontWeight: "600" }}>Manage Class</h3>
               <Link to={`/schedule/${session._id}/edit`}>Edit Class</Link>
-              <button onClick={() => handleDeleteSession(session._id)}>
+              <button
+                className={adminStyles.deleteButton}
+                onClick={() => handleDeleteSession(session._id)}>
                 Delete
               </button>
             </div>
@@ -53,7 +59,7 @@ const ClassPage = ({ handleAddBooking, handleDeleteSession }) => {
         </section>
         <section>
           {session.bookings.length > 0 ? (
-            <h3>
+            <h3 style={{ fontWeight: "600" }}>
               Reserved {session.bookings.length}/{session.capacity}
             </h3>
           ) : (
@@ -76,7 +82,9 @@ const ClassPage = ({ handleAddBooking, handleDeleteSession }) => {
   } else {
     return (
       <main className={studentStyles.container}>
-        <h1 className={adminStyles.nonCursive}>{session.title}</h1>
+        <h1 style={{ fontWeight: "600" }} className={studentStyles.nonCursive}>
+          {session.title}
+        </h1>
         <h2>
           {session.month} {session.day}, {session.year} • {session.startTime} -{" "}
           {session.endTime}

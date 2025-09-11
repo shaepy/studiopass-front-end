@@ -7,7 +7,7 @@
   position: fixed;
   padding: 14px 21px;
   align-items: center;
-  background: #785461;
+  background: #b0d0d3;
 }
 
 .container ul {
@@ -21,7 +21,9 @@
 }
 
 li a {
-  color: #fff;
+  color: #000;
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 0.95rem;
 }
 
 li a:hover {
@@ -29,7 +31,7 @@ li a:hover {
 }
 
 .container li {
-  margin-left: 35px;
+  margin-left: 30px;
   text-align: right;
 }
 
@@ -40,4 +42,15 @@ li a:hover {
   .container li {
     font-size: 15px;
   }
+}
+
+button.authButton {
+  background-color: #353535;
+  font-size: 0.95rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+button.authButton:hover {
+  background-color: #668a8f;
+  color: #fff;
 }

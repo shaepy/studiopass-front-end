@@ -6,10 +6,15 @@ main section {
   justify-content: center;
   align-items: center;
 }
-/* 
-section.homeContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
+
+button.landingCta {
+  background-color: #353535;
+  font-size: 0.95rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+button.landingCta:hover {
+  background-color: #668a8f;
+  color: #fff;
+}

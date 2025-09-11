@@ -46,7 +46,9 @@ const Landing = () => {
                   <button onClick={linkToBookAClass}>Book a Class</button>
                 )}
                 {(user.role === "instructor" || user.role === "owner") && (
-                  <button onClick={linkToAgenda}>View Schedule</button>
+                  <button className={styles.landingCta} onClick={linkToAgenda}>
+                    View Schedule
+                  </button>
                 )}
               </section>
             </main>
@@ -54,19 +56,18 @@ const Landing = () => {
             <main>
               {" "}
               <section
-                style={{ fontWeight: "600" }}
+                style={{ fontWeight: "500" }}
                 className={styles.homeContent}>
                 <p>
                   The heart of our academy is rooted in the disciplines of
-                  traditional ballet.
-                </p>
-                <p>
-                  We serve children, teens, and adults while broadening movement
-                  education through contemporary dance, flexibility training,
-                  and Pilates/yoga.
+                  traditional ballet. We serve children, teens, and adults while
+                  broadening movement education through contemporary dance and
+                  flexibility training.
                 </p>
                 <p>The stage begins with a single step.</p>
-                <button onClick={linkToRegister}>Enroll Today</button>
+                <button className={styles.landingCta} onClick={linkToRegister}>
+                  Enroll Today
+                </button>
               </section>
             </main>
           )}
