@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
 
 * {
   box-sizing: border-box;
@@ -8,7 +9,7 @@
 
 #root {
   height: 100%;
-  color: #213547;
+  color: #000;
 }
 
 .landing-bg {
@@ -19,11 +20,12 @@
 
 a {
   font-weight: 500;
-  color: #785461;
+  color: #33575b;
+  transition: transform 0.3s ease, color 0.3s ease;
   text-decoration: inherit;
 }
 a:hover {
-  color: #9b6f7f;
+  color: #89b8bd;
 }
 
 html,
@@ -50,7 +52,7 @@ main {
 }
 
 h1 {
-  font-family: "Dancing Script", cursive;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 3.6rem;
 }
 
@@ -78,19 +80,20 @@ textarea {
 }
 
 button {
-  background-color: #785461;
+  background-color: #b0d0d3;
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: 0.6em 1em;
+  font-size: .95em;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
-  transition: background-color 0.25s;
-  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  color: #000;
 }
 button:hover {
-  background-color: #9b6f7f;
+  background-color: #88afb4;
+  color: #fff;
 }
 button:focus,
 button:focus-visible {

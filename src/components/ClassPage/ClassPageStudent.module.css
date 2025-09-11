@@ -30,3 +30,12 @@ h1.nonCursive {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 2.6rem;
 }
+
+button.disabledButton {
+  background-color: #dadada;
+  color:#9f9f9f;
+}
+
+button.disabledButton:hover {
+  background-color: #dadada;
+}

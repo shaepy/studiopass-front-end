@@ -1,4 +1,4 @@
-import {  useContext } from "react";
+import { useContext } from "react";
 import { Routes, Route, useNavigate } from "react-router";
 import { UserContext } from "./contexts/UserContext";
 import NavBar from "./components/NavBar/NavBar";
@@ -71,7 +71,10 @@ function App() {
         {/* Admin-only routes (Instructor & Owner) */}
         {user && (user.role === "owner" || user.role === "instructor") && (
           <>
-            <Route path="/users/:userId" element={<UserProfile />} />
+            <Route
+              path="/users/:userId"
+              element={<UserProfile linkToClassPage={linkToClassPage} />}
+            />
           </>
         )}
 

@@ -34,6 +34,9 @@ main {
 
 article.agendaArticle {
   width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .card {
@@ -49,4 +52,15 @@ article.agendaArticle {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button.cancelButton {
+  font-size: 0.85rem;
+  background-color: #353535;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+button.cancelButton:hover {
+  background-color: red;
 }

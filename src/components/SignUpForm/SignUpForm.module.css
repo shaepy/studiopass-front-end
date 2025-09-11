@@ -33,4 +33,9 @@ section.signUpForm {
 
 button.disabledButton {
   background-color: #dadada;
+  color:#9f9f9f;
+}
+
+button.disabledButton:hover {
+  background-color: #dadada;
 }

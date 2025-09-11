@@ -31,23 +31,48 @@ h1 {
 
 button.disabledButton {
   background-color: #dadada;
+  color: #9f9f9f;
 }
 
-article.scheduleArticle {
-  width: 75%;
+button.disabledButton:hover {
+  background-color: #dadada;
 }
 
 .card {
   background-color: white;
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 14px;
+  padding: 40px;
   margin: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
-  max-width: 550px;
+  max-width: 700px;
+  height: 60px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+table {
+  margin-top: 20px;
+}
+
+table td {
+  padding: 6px;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button.studentBookButton {
+  width: 85px;
+  font-size: 0.9rem;
+}
+
+button.viewButton {
+  background-color: #353535;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+button.viewButton:hover {
+  background-color: #89B8BD;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }

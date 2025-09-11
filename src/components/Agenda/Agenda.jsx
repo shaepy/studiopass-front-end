@@ -56,7 +56,7 @@ const Agenda = ({ linkToClassPage }) => {
               className={`${styles.agendaArticle} ${styles.card}`}
               key={booking._id}>
               <header>
-                <h2>{booking.sessionId.title}</h2>
+                <h2 style={{ fontWeight: "600" }}>{booking.sessionId.title}</h2>
               </header>
               <div>
                 <p>
@@ -66,7 +66,7 @@ const Agenda = ({ linkToClassPage }) => {
                   View Class
                 </Link>
               </div>
-              <button onClick={() => handleCancelBooking(booking._id, user)}>
+              <button className={styles.cancelButton} onClick={() => handleCancelBooking(booking._id, user)}>
                 Cancel
               </button>
             </article>
@@ -85,7 +85,7 @@ const Agenda = ({ linkToClassPage }) => {
               className={`${styles.agendaArticle} ${styles.card}`}
               key={session._id}>
               <header>
-                <h2>{session.title}</h2>
+                <h2 style={{ fontWeight: "600" }}>{session.title}</h2>
               </header>
               <div>
                 <p>

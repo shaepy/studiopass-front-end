@@ -36,14 +36,26 @@ section {
 }
 
 li.reservedList a {
-  color: #785461;
+  color: #33575b;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 li.reservedList a:hover {
-  color: #a37b8a;
+  color: #89b8bd;
 }
 
 h1.nonCursive {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-size: 2.6rem;
+}
+
+button.deleteButton {
+  font-size: 0.85rem;
+  background-color: #353535;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+button.deleteButton:hover {
+  background-color: red;
 }
