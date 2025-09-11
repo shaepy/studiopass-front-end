@@ -62,17 +62,18 @@ table td {
 }
 
 button.studentBookButton {
-  width: 85px;
-  font-size: 0.9rem;
+  width: 100%;
+  font-size: 0.83rem;
 }
 
 button.viewButton {
+  width: 100%;
   background-color: #353535;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.83rem;
 }
 
 button.viewButton:hover {
-  background-color: #89B8BD;
+  background-color: #89b8bd;
   transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }

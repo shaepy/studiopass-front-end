@@ -62,11 +62,17 @@ const Agenda = ({ linkToClassPage }) => {
                 <p>
                   {booking.startDate} • {booking.startTime} - {booking.endTime}
                 </p>
-                <Link to={`/schedule/${booking.sessionId._id}`}>
-                  View Class
-                </Link>
               </div>
-              <button className={styles.cancelButton} onClick={() => handleCancelBooking(booking._id, user)}>
+              <button
+                className={styles.viewButton}
+                onClick={() => {
+                  linkToClassPage(booking.sessionId._id);
+                }}>
+                View
+              </button>
+              <button
+                className={styles.cancelButton}
+                onClick={() => handleCancelBooking(booking._id, user)}>
                 Cancel
               </button>
             </article>

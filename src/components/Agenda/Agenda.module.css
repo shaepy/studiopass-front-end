@@ -46,7 +46,8 @@ article.agendaArticle {
   margin: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 550px;
+  max-width: 475px;
+  width: 50%;
 }
 
 .card:hover {
@@ -55,7 +56,8 @@ article.agendaArticle {
 }
 
 button.cancelButton {
-  font-size: 0.85rem;
+  width: 20%;
+  font-size: 0.9rem;
   background-color: #353535;
   color: #fff;
   transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
@@ -63,4 +65,17 @@ button.cancelButton {
 
 button.cancelButton:hover {
   background-color: red;
+}
+
+button.viewButton {
+  width: 20%;
+  font-size: 0.9rem;
+  background-color: #b0d0d3;
+  color: #000;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+button.viewButton:hover {
+  background-color: #89b8bd;
+  color: #fff;
 }

@@ -52,7 +52,11 @@ const Schedule = ({ handleAddBooking, linkToClassPage }) => {
                 <td>{session.endTime}</td>
                 <td>{session.instructorName}</td>
                 <td>
-                  <button className={styles.viewButton} onClick={() => linkToClassPage(session._id)}>View</button>
+                  <button
+                    className={styles.viewButton}
+                    onClick={() => linkToClassPage(session._id)}>
+                    View
+                  </button>
                 </td>
                 <td>
                   {user &&
@@ -80,8 +84,7 @@ const Schedule = ({ handleAddBooking, linkToClassPage }) => {
                     (user.role === "instructor" || user.role === "owner") && (
                       <>
                         <p>
-                          {session.bookings.length}/{session.capacity}{" "}
-                          registered.
+                          {session.bookings.length}/{session.capacity} booked.
                         </p>
                       </>
                     )}

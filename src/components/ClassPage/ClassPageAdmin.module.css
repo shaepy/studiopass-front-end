@@ -17,13 +17,17 @@ header {
   flex-direction: column;
 }
 
-.manageClass {
-  margin: 10px;
+.manageClassActions {
+  margin-top: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
+}
+
+.manageClassDiv {
+  margin-top: 12px;
 }
 
 .description {
@@ -33,6 +37,12 @@ header {
 section {
   display: flex;
   gap: 10px;
+}
+
+li.reservedList {
+  border: 1px solid #89B8BD;
+  padding: 10px;
+  border-radius: 12px;
 }
 
 li.reservedList a {
@@ -50,7 +60,7 @@ h1.nonCursive {
 }
 
 button.deleteButton {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   background-color: #353535;
   color: #fff;
   transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
@@ -58,4 +68,31 @@ button.deleteButton {
 
 button.deleteButton:hover {
   background-color: red;
+}
+
+button.editButton {
+  font-size: 0.9rem;
+  background-color: #b0d0d3;
+  color: #000;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+button.editButton:hover {
+  background-color: #89b8bd;
+  color: #fff;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 550px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

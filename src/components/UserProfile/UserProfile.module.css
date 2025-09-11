@@ -10,6 +10,7 @@
   flex-direction: column;
   gap: 10px;
   width: 50%;
+  max-width: 420px;
 }
 
 .card:hover {

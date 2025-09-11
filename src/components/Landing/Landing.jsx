@@ -43,7 +43,11 @@ const Landing = () => {
                 <p>Your training continues, {user.username}.</p>
                 <p>Step back into the discipline and beauty of ballet.</p>
                 {user.role === "student" && (
-                  <button onClick={linkToBookAClass}>Book a Class</button>
+                  <button
+                    className={styles.landingCta}
+                    onClick={linkToBookAClass}>
+                    Book a Class
+                  </button>
                 )}
                 {(user.role === "instructor" || user.role === "owner") && (
                   <button className={styles.landingCta} onClick={linkToAgenda}>

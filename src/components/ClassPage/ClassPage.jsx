@@ -1,11 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
-import { useParams, Link } from "react-router";
+import { useParams, Link, useNavigate } from "react-router";
 import * as sessionApi from "../../services/sessionService";
 import adminStyles from "./ClassPageAdmin.module.css";
 import studentStyles from "./ClassPageStudent.module.css";
 
 const ClassPage = ({ handleAddBooking, handleDeleteSession }) => {
+  const navigate = useNavigate();
   const { user } = useContext(UserContext);
   const { sessionId } = useParams();
   const [session, setSession] = useState(null);
@@ -18,6 +19,10 @@ const ClassPage = ({ handleAddBooking, handleDeleteSession }) => {
     };
     fetchSession();
   }, [sessionId]);
+
+  const linkToEditPage = () => {
+    navigate(`/schedule/${sessionId}/edit`);
+  };
 
   if (!session)
     return (
@@ -43,17 +48,23 @@ const ClassPage = ({ handleAddBooking, handleDeleteSession }) => {
           </div>
           <h2>with {session.instructorName}</h2>
         </header>
-        <section>
+        <section className={adminStyles.card}>
           <p className={adminStyles.description}>{session.description}</p>
           {user.role === "owner" && (
-            <div className={adminStyles.manageClass}>
+            <div className={adminStyles.manageClassDiv}>
               <h3 style={{ fontWeight: "600" }}>Manage Class</h3>
-              <Link to={`/schedule/${session._id}/edit`}>Edit Class</Link>
-              <button
-                className={adminStyles.deleteButton}
-                onClick={() => handleDeleteSession(session._id)}>
-                Delete
-              </button>
+              <div className={adminStyles.manageClassActions}>
+                <button
+                  className={adminStyles.editButton}
+                  onClick={linkToEditPage}>
+                  Edit
+                </button>
+                <button
+                  className={adminStyles.deleteButton}
+                  onClick={() => handleDeleteSession(session._id)}>
+                  Delete
+                </button>
+              </div>
             </div>
           )}
         </section>
@@ -90,21 +101,23 @@ const ClassPage = ({ handleAddBooking, handleDeleteSession }) => {
           {session.endTime}
         </h2>
         <h2>with {session.instructorName}</h2>
-        <p className={studentStyles.description}>{session.description}</p>
-        {user &&
-          (session.reservedStatus ? (
-            <button disabled className={studentStyles.disabledButton}>
-              Reserved
-            </button>
-          ) : session.bookings.length >= session.capacity ? (
-            <button disabled className={studentStyles.disabledButton}>
-              Full
-            </button>
-          ) : (
-            <button onClick={() => handleAddBooking(session._id, user._id)}>
-              Book
-            </button>
-          ))}
+        <section className={studentStyles.card}>
+          <p className={studentStyles.description}>{session.description}</p>
+          {user &&
+            (session.reservedStatus ? (
+              <button disabled className={studentStyles.disabledButton}>
+                Reserved
+              </button>
+            ) : session.bookings.length >= session.capacity ? (
+              <button disabled className={studentStyles.disabledButton}>
+                Full
+              </button>
+            ) : (
+              <button onClick={() => handleAddBooking(session._id, user._id)}>
+                Book
+              </button>
+            ))}
+        </section>
       </main>
     );
   }

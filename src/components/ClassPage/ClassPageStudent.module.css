@@ -39,3 +39,18 @@ button.disabledButton {
 button.disabledButton:hover {
   background-color: #dadada;
 }
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 550px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
